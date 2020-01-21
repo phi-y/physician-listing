@@ -1,0 +1,76 @@
+/* Simple reset */
+* {
+  font-family: 'Slabo 27px', serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Setup View port */
+html,body, #root {
+  height: 100%;
+}
+
+/* Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "SideBar Main Main Main" "SideBar Main Main Main" "SideBar Main Main Main";
+  height:100%;
+}
+
+.SideBar { 
+  grid-area: SideBar; 
+  background-color: #4484CE;
+  height: 100%;
+  color: #FFFFFF;
+}
+
+.Main { 
+  grid-area: Main; 
+  background-color: #D9D9D9;
+  height: 100%;
+  color: #0E0B16;
+  padding-top:25px;
+  padding-left: 50px;
+}
+
+
+/* Some simple classes to spruce things up */
+.lightGreyHover:hover {
+  background-color: RGB(230,230,230,.2);
+}
+
+.light {
+  color: #555;
+}
+
+/* quick and dirty table styling */
+table {
+  border-collapse: collapse;
+}
+table td, table th {
+  border: 1px solid black;
+}
+table  th {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child,
+table thead th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table thead th:last-child {
+  border-right: 0;
+}
+
+tr:hover {
+  background-color: RGBA(25,25,25,.3);
+}
+
+th,td {
+  padding: 5px;
+}
